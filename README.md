@@ -27,12 +27,20 @@ A pre requisite it to have [openssl](http://www.openssl.org/) installed and its 
 * SHA256 digests http://www.w3.org/2001/04/xmlenc#sha256
 * SHA512 digests http://www.w3.org/2001/04/xmlenc#sha512
 
+### GOST Hashing Algorithms in GostSignedXml 
+
+* GOST3411_94 digests http://www.w3.org/2001/04/xmldsig-more#gostr3411 
+
 ### Signature Algorithms
 
 * RSA-SHA1 http://www.w3.org/2000/09/xmldsig#rsa-sha1
 * RSA-SHA256 http://www.w3.org/2001/04/xmldsig-more#rsa-sha256
 * RSA-SHA512 http://www.w3.org/2001/04/xmldsig-more#rsa-sha512
 * HMAC-SHA1 http://www.w3.org/2000/09/xmldsig#hmac-sha1
+
+### GOST Signature Algorithms in GostSignedXml
+
+* GOST3410_2001 http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411
 
 by default the following algorithms are used:
 
@@ -179,6 +187,9 @@ To verify xml documents:
 - `checkSignature(xml)` - validates the given xml document and returns true if the validation was successful, `sig.validationErrors` will have the validation errors if any, where:
     - `xml` - a string containing a xml document
 
+### GostSignedXml
+
+The `GostSignedXml` replicate the `GostSignedXml` but it contains GOST algorithms 
 
 ### FileKeyInfo
 
